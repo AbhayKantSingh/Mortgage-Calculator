@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="header">
+          <h2>Mortgage Calculator</h2>
+          <a href="#" id="clearAll">Clear All</a>
+        </div>
+
+        <label>Mortgage Amount</label>
+        <div class="input-group">
+          <span>£</span>
+          <input type="number" id="amount" placeholder="300" />
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <label>Mortgage Term</label>
+            <div class="input-group">
+              <input type="number" id="term" value="25" />
+              <span>years</span>
+            </div>
+          </div>
+          <div class="column">
+            <label>Interest Rate</label>
+            <div class="input-group">
+              <input type="number" id="rate" value="5.25" step="0.01" />
+              <span>%</span>
+            </div>
+          </div>
+        </div>
+
+        <label>Mortgage Type</label>
+        <div class="radio-group">
+          <label class="radio-btn active">
+            <input type="radio" name="type" value="repayment" checked />
+            Repayment
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="type" value="interest" />
+            Interest Only
+          </label>
+        </div>
+
+        <button id="calculate">
+          <img src="./icon-calculator.svg" />
+          Calculate Repayments
+        </button>
+      </div>
+
+      <div class="result-section">
+        <img src="./illustration-empty.svg" />
+        <h3>Results shown here</h3>
+        <p id="result-text">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
